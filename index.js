@@ -13,6 +13,8 @@ let words = fs.readFileSync('words_alpha.txt').toString().split(/\s+/)
 let allowedWords = words.filter(word=>!bannedLetters.test(word)).sort((a,b) => b.length - a.length)
 
 console.log('Longest Words:')
+
+// prints out the longest words.
 allowedWords.some(word =>
 {
     if(allowedWords[0].length === word.length) console.log(word)        
