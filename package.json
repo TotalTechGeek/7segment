@@ -1,0 +1,15 @@
+{
+  "name": "7segmentdisplay",
+  "version": "1.0.0",
+  "description": "Quick Node.js code to test for 7 segment display compatibility.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "tom scott",
+    "seven segment"
+  ],
+  "author": "Jesse Daniel Mitchell",
+  "license": "MIT"
+}
