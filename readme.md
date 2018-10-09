@@ -10,5 +10,19 @@ This code was a quick implementation of the algorithm to test for the situation 
 To launch the program, execute the following from a command-line interface: 
 
 ```
-npm start
+node index.js [optional regex]
 ```
+
+You are allowed to pass in a regex string as an argument to this program. 
+
+For example, executing 
+
+```
+node index.js "[^oizehslbg]"
+```
+
+Should return the longest word that can be typed in on a 9 digit calculator screen (flipped upside down).
+
+## License
+
+The official license used is the Unlicense. This work is therefore released to the public domain. 
