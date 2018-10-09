@@ -1,7 +1,10 @@
 const fs = require('fs')
 
+// gets the arguments
+const args = process.argv.slice(2)
+
 // the regex for testing for banned letters
-const bannedLetters = /[gkmqvwxz]/
+const bannedLetters = new RegExp(args[0] || '[gkmqvwxz]')
 
 // read in the words (\s+ refers to new-line characters)
 let words = fs.readFileSync('words_alpha.txt').toString().split(/\s+/)
