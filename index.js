@@ -12,8 +12,12 @@ let words = fs.readFileSync('words_alpha.txt').toString().split(/\s+/)
 // filter out the banned letters, and then sort by length in descending order (this will allow you to print out the top 10 longest words and such)
 let allowedWords = words.filter(word=>!bannedLetters.test(word)).sort((a,b) => b.length - a.length)
 
-// output the longest word.
-console.log(`Longest Word: ${allowedWords[0]}`)
+console.log('Longest Words:')
+allowedWords.some(word =>
+{
+    if(allowedWords[0].length === word.length) console.log(word)        
+    else return true  
+})
 
 // export all the words into a text file, sorted
 fs.writeFileSync('words_out.txt', allowedWords.sort().join('\r\n'))
